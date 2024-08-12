@@ -1,10 +1,8 @@
-
-
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
     position: relative;
     overflow: hidden;
 }
@@ -17,25 +15,33 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.8;
+    opacity: 0.7; /* Adjusts the visibility of the background image */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 1; /* Ensures the container is above the background image */
 }
 
 .login-box {
-    background-color: rgba(255, 255, 255, 0.429);
+    background-color: rgba(0, 0, 0, 0.6); /* Dark transparent background */
     padding: 40px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-   
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
 }
 
 .login-box h2 {
     margin-bottom: 20px;
-    color: #fff;
+    color: #fff; /* White text for contrast */
+    font-size: 24px;
 }
 
 .textbox {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .textbox input {
@@ -44,32 +50,40 @@
     background: none;
     border: none;
     outline: none;
-    color: #ffffff;
+    color: #fff;
     font-size: 18px;
     border-bottom: 2px solid #fff;
 }
 
 .btn {
     width: 100%;
-    padding: 10px;
-    background-color: #00695c;
+    padding: 12px;
+    background-color: #00796b; /* A darker teal color */
     border: none;
     cursor: pointer;
     font-size: 18px;
     color: #fff;
     border-radius: 5px;
     margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #004d40; /* Darker shade on hover */
 }
 
 .remember {
-    margin-top: 15px;
+    margin-top: 20px;
     color: #fff;
+    font-size: 14px;
 }
 
 .forgot {
+    display: flex;
+    margin: 5px;
     float: right;
     text-decoration: none;
-    color: #3f73d1;
+    color: #82b1ff;
 }
 
 .forgot:hover {
